@@ -3,6 +3,7 @@
  */
 package org.example;
 
+import unit1GettingStarted.Basics;
 import unit1GettingStarted.PrintHello;
 
 public class App {
@@ -14,5 +15,7 @@ public class App {
         System.out.println(new App().getGreeting());
 
         PrintHello.helloFromCupOfJava();
+
+        Basics.summaryOfChapter2();
     }
 }

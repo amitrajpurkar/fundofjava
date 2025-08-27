@@ -1,12 +1,26 @@
 package unit1GettingStarted;
 
 public class Basics {
-    public static void main(String[] args) {
+    public static void summaryOfChapter2() {
         advantagesThanCpp();
         osAndIdes();
         programConstituents();
         threeBasicSteps();
         sequenceFromCodeToExecute();
+
+        readability();
+    }
+
+    private static void readability() {
+        System.out.println("\n\n-----------------");
+        System.out.println("READABILITY OF CODE and its SIGNIFICANCE");
+        System.out.println("\n1. programs have long life; it can be lengthy and complex");
+        System.out.println("\n2. programs are maintained by many developers, besides original authors");
+        System.out.println("\n3. maintainability is directly proportional to READABILITY of code");
+        System.out.println("\n4. Once READABLE, one can understand features and complexity of code");
+        System.out.println("\n5. READABILITY includes Layout, Spacing, Indentation, Comments, etc");
+        System.out.println("\n6. READABILITY of code is very important");
+        System.out.println("-----------------");
     }
 
     private static void threeBasicSteps() {
