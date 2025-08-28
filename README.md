@@ -13,10 +13,10 @@
 ### what you will need
 * java 21 or above [openjdk](https://openjdk.org/projects/jdk/24/).. use LTS versions.. [release matrix](https://www.java.com/releases/matrix/)
 * [gradle 9 or above](https://gradle.org/install/).. keep this upgraded.. build automation tool.. professionals use this (others are maven, ant..) [link1](https://www.baeldung.com/ant-maven-gradle); [link2](https://www.jrebel.com/blog/java-build-tools-comparison)
- * Use gradle to learn how to manage code, modularization, dependencies, etc
- * use gradle to compile and build the entire application or project as whole.
- * since High Schools or Middle Schools do not allow installations, and usage of IDEs either... as students you will end up running each java file individually through the IDE
- * its encouraged though to make use of gradle and IDE when you are at Home or an environment which is not having such restrictions
+  * Use gradle to learn how to manage code, modularization, dependencies, etc
+  * use gradle to compile and build the entire application or project as whole.
+  * since High Schools or Middle Schools do not allow installations, and usage of IDEs either... as students you will end up running each java file individually through the IDE
+  * its encouraged though to make use of gradle and IDE when you are at Home or an environment which is not having such restrictions
 * [VS Code](https://code.visualstudio.com) or similar IDE... productivity booster (others Eclipse, IntelliJ Idea)
 * personally my AI assistant is [Windsurf](https://windsurf.com) (previously known as Codeium)... productivity booster
 
