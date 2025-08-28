@@ -1,6 +1,8 @@
 # companion codebase for "Fundamentals of Java"
 * intent of this repo is to draft code that will help understand the chapters and topics from this book by Kenneth Lambert and Martin Osborne
 * as you read the book chapter by chapter, use this repo as your sandbox for trying out the concepts presented
+* attempt/ try the exercises as well as projects presented in each chapter..
+* practise and practise... thats the only way one learns.s
 
 ### what this repo provides
 * a gradle java application
