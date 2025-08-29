@@ -3,8 +3,8 @@
  */
 package org.example;
 
-import unit1GettingStarted.Basics;
-import unit1GettingStarted.PrintHello;
+import unit1GettingStarted.chp02.Basics;
+import unit1GettingStarted.chp02.PrintHello;
 
 public class App {
     public String getGreeting() {

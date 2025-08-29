@@ -1,4 +1,4 @@
-package unit1GettingStarted;
+package unit1GettingStarted.chp02;
 
 public class PrintHello {
 

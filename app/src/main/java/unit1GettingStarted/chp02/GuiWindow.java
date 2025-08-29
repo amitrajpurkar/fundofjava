@@ -1,4 +1,4 @@
-package unit1GettingStarted;
+package unit1GettingStarted.chp02;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
