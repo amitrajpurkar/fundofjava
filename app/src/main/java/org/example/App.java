@@ -3,8 +3,8 @@
  */
 package org.example;
 
-import unit1GettingStarted.chp02.Basics;
 import unit1GettingStarted.chp02.PrintHello;
+import unit1GettingStarted.chp02.Summary;
 
 public class App {
     public String getGreeting() {
@@ -16,6 +16,6 @@ public class App {
 
         PrintHello.helloFromCupOfJava();
 
-        Basics.summaryOfChapter2();
+        Summary.summaryOfChapter2();
     }
 }

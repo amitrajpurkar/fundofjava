@@ -3,7 +3,7 @@ package unit1GettingStarted.chp02;
 import static unit1GettingStarted.Utils.printSeparator;
 import static unit1GettingStarted.Utils.printSeparatorWithSpacing;
 
-public class Basics {
+public class Summary {
     public static void summaryOfChapter2() {
         advantagesThanCpp();
         osAndIdes();
