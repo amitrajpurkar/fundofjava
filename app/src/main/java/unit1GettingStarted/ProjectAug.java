@@ -75,6 +75,12 @@ public class ProjectAug {
                         }
                     }
                     case 5 -> System.out.println("you entered Exit");
+                    default -> System.out.println("Invalid choice");
+                }
+                if (choice != 5) {
+                    showMenu();
+                    System.out.println("Enter your choice: ");
+                    choice = scanner.nextInt();
                 }
             } while (choice != 5);
         }
