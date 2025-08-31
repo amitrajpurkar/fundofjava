@@ -73,5 +73,37 @@ public class Student {
         }
         return total / studentList.size();
     }
-    
+    public static String highestMathsScore() {
+        int highest = 0;
+        String highestName = "";
+        for (Student student : studentList) {
+            if (student.mathsScore > highest) {
+                highest = student.mathsScore;
+                highestName = student.name;
+            }
+        }
+        return "Highest Maths Score: " + highest + " by " + highestName;
+    }
+    public static String highestPhysicsScore() {
+        int highest = 0;
+        String highestName = "";
+        for (Student student : studentList) {
+            if (student.physicsScore > highest) {
+                highest = student.physicsScore;
+                highestName = student.name;
+            }
+        }
+        return "Highest Physics Score: " + highest + " by " + highestName;
+    }
+    public static String highestHistoryScore() {
+        int highest = 0;
+        String highestName = "";
+        for (Student student : studentList) {
+            if (student.historyScore > highest) {
+                highest = student.historyScore;
+                highestName = student.name;
+            }
+        }
+        return "Highest History Score: " + highest + " by " + highestName;
+    }
 }

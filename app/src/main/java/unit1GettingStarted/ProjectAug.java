@@ -45,6 +45,9 @@ public class ProjectAug {
                         System.out.println("Average maths score is " + Student.averageMathsScore());
                         System.out.println("Average physics score is " + Student.averagePhysicsScore());
                         System.out.println("Average history score is " + Student.averageHistoryScore());
+                        System.out.println(Student.highestMathsScore());
+                        System.out.println(Student.highestPhysicsScore());
+                        System.out.println(Student.highestHistoryScore());
                     }
                     case 2 -> {
                         System.out.print("Enter a number: ");
