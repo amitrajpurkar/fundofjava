@@ -88,6 +88,7 @@ public class ProjectAug {
     }
 
     private static void showMenu() {
+        System.out.println("\n\n\n\n---------------------");
         System.out.println("Choose from the following menu");
         System.out.println("1. students and scores");
         System.out.println("2. Find factorial");
