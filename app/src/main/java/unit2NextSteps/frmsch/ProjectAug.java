@@ -1,5 +1,6 @@
-package unit1GettingStarted;
+package unit2NextSteps.frmsch;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -31,33 +32,34 @@ public class ProjectAug {
                             a = scanner.nextInt();
                             b = scanner.nextInt();
                             c = scanner.nextInt();
-                            Student.addStudent(new Student(name, a, b, c));
+                            Students.addStudent(new Student(name, a, b, c));
                         }
+                        List<Student> sList = Students.getStudents();
                         System.out.println("Name\t\tTest 1\tTest 2\tTest 3\tAverage");
                         for (int i=0; i < n; i++) {
-                            System.out.println(Student.studentList.get(i).getName() + "\t\t" +
-                                    Student.studentList.get(i).getMathsScore() + "\t\t" +
-                                    Student.studentList.get(i).getPhysicsScore() + "\t\t" +
-                                    Student.studentList.get(i).getHistoryScore() + "\t\t" +
-                                    Student.studentList.get(i).getAverageScore());
+                            System.out.println(sList.get(i).getName() + "\t\t" +
+                                    sList.get(i).getMathsScore() + "\t\t" +
+                                    sList.get(i).getPhysicsScore() + "\t\t" +
+                                    sList.get(i).getHistoryScore() + "\t\t" +
+                                    sList.get(i).getAverageScore());
                         }
-                        System.out.println("Class average is " + Student.averageAllScore());
-                        System.out.println("Average maths score is " + Student.averageMathsScore());
-                        System.out.println("Average physics score is " + Student.averagePhysicsScore());
-                        System.out.println("Average history score is " + Student.averageHistoryScore());
-                        System.out.println(Student.highestMathsScore());
-                        System.out.println(Student.highestPhysicsScore());
-                        System.out.println(Student.highestHistoryScore());
+                        System.out.println("Class average is " + Students.averageAllScore());
+                        System.out.println("Average maths score is " + Students.averageMathsScore());
+                        System.out.println("Average physics score is " + Students.averagePhysicsScore());
+                        System.out.println("Average history score is " + Students.averageHistoryScore());
+                        System.out.println(Students.highestMathsScore());
+                        System.out.println(Students.highestPhysicsScore());
+                        System.out.println(Students.highestHistoryScore());
                     }
                     case 2 -> {
                         System.out.print("Enter a number: ");
                         int number = scanner.nextInt();
-                        System.out.println("Factorial of " + number + " is " + Utils.findFactorial(number));
+                        System.out.println("Factorial of " + number + " is " + Helper.findFactorial(number));
                     }
                     case 3 -> {
                         System.out.print("Enter a number: ");
                         int number1 = scanner.nextInt();
-                        if (Utils.isOdd(number1)) {
+                        if (Helper.isOdd(number1)) {
                             System.out.println("The number is odd");
                         } else {
                             System.out.println("The number is even");
@@ -66,9 +68,9 @@ public class ProjectAug {
                     case 4 -> {
                         System.out.print("Enter a number: ");
                         int number2 = scanner.nextInt();
-                        if ("Prime".equalsIgnoreCase(Utils.isPrime(number2))) {
+                        if ("Prime".equalsIgnoreCase(Helper.isPrime(number2))) {
                             System.out.println("The number is prime");
-                        } else if ("Composite".equalsIgnoreCase(Utils.isPrime(number2))) {
+                        } else if ("Composite".equalsIgnoreCase(Helper.isPrime(number2))) {
                             System.out.println("The number is composite");
                         } else {
                             System.out.println("The number is neither prime nor composite");

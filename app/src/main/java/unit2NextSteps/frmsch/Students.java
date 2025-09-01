@@ -1,41 +1,16 @@
-package unit1GettingStarted;
+package unit2NextSteps.frmsch;
 
 import java.util.ArrayList;
 import java.util.List;
 
+public class Students {
+    
+    private static List<Student> studentList = new ArrayList<Student>();
 
-public class Student {
-    String name;
-    int mathsScore;
-    int physicsScore;
-    int historyScore;
-    double averageScore;
-
-    public Student(String name, int mathsScore, int physicsScore, int historyScore) {
-        this.name = name;
-        this.mathsScore = mathsScore;
-        this.physicsScore = physicsScore;
-        this.historyScore = historyScore;
-        this.averageScore = (mathsScore + physicsScore + historyScore) / 3;
+    public static List<Student> getStudents(){
+        return studentList;
     }
 
-    public String getName() {
-        return name;
-    }
-    public int getMathsScore() {
-        return mathsScore;
-    }
-    public int getPhysicsScore() {
-        return physicsScore;
-    }
-    public int getHistoryScore() {
-        return historyScore;
-    }
-    public double getAverageScore() {
-        return averageScore;
-    }
-
-    static List<Student> studentList = new ArrayList<Student>();
     public static void addStudent(Student student) {
         studentList.add(student);
     }
@@ -106,4 +81,5 @@ public class Student {
         }
         return "Highest History Score: " + highest + " by " + highestName;
     }
+        
 }
