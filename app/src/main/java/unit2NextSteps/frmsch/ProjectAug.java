@@ -32,10 +32,16 @@ public class ProjectAug {
                             a = scanner.nextInt();
                             b = scanner.nextInt();
                             c = scanner.nextInt();
-                            Students.addStudent(new Student(name, a, b, c));
+                            Student student = new Student(name, a, b, c);
+                            String validityCheck = student.validate();
+                            if (!validityCheck.isEmpty()) {
+                                System.out.println(validityCheck);
+                            } else {
+                                Students.addStudent(student);
+                            }
                         }
                         List<Student> sList = Students.getStudents();
-                        System.out.println("Name\t\tTest 1\tTest 2\tTest 3\tAverage");
+                        System.out.println("Name\t\tMaths\t\tPhysics\t\tHistory\t\tAverage");
                         for (int i=0; i < n; i++) {
                             System.out.println(sList.get(i).getName() + "\t\t" +
                                     sList.get(i).getMathsScore() + "\t\t" +

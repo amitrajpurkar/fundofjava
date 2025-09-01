@@ -25,7 +25,7 @@ public class Students {
         for (Student student : studentList) {
             total += student.mathsScore + student.physicsScore + student.historyScore;
         }
-        return total / studentList.size();
+        return total / (studentList.size() * 3);
     }
     public static double averageMathsScore() {
         int total = 0;

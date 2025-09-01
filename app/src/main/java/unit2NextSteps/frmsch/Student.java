@@ -32,5 +32,20 @@ public class Student {
         return averageScore;
     }
 
-
+    public String validate() {
+        StringBuilder message = new StringBuilder();
+        if (name.isEmpty()) {
+            message.append("Name cannot be empty; ");
+        }
+        if (mathsScore < 0 || mathsScore > 100) {
+            message.append("Maths score must be between 0 and 100; value: ").append(mathsScore).append("; ");
+        }
+        if (physicsScore < 0 || physicsScore > 100) {
+            message.append("Physics score must be between 0 and 100; value: ").append(physicsScore).append("; ");
+        }
+        if (historyScore < 0 || historyScore > 100) {
+            message.append("History score must be between 0 and 100; value: ").append(historyScore).append("; ");
+        }
+        return message.toString();
+    }
 }
