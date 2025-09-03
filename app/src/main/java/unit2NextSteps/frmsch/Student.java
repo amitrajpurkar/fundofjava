@@ -2,13 +2,13 @@ package unit2NextSteps.frmsch;
 
 
 public class Student {
-    String name;
-    int mathsScore;
-    int physicsScore;
-    int historyScore;
-    double averageScore;
+    private String name;
+    private int mathsScore;
+    private int physicsScore;
+    private int historyScore;
+    private double averageScore;
 
-    public Student(String name, int mathsScore, int physicsScore, int historyScore) {
+    private Student(String name, int mathsScore, int physicsScore, int historyScore) {
         this.name = name;
         this.mathsScore = mathsScore;
         this.physicsScore = physicsScore;
@@ -48,4 +48,30 @@ public class Student {
         }
         return message.toString();
     }
+
+    public static class StuBuilder {
+        private String name;
+        private int mathsScore;
+        private int physicsScore;
+        private int historyScore;
+
+        public StuBuilder(String name) {
+            this.name = name;
+        }
+
+        public StuBuilder maths(int mathsScore) {
+            this.mathsScore = mathsScore;
+            return this;
+        }
+        public StuBuilder physics(int physicsScore) {
+            this.physicsScore = physicsScore;
+            return this;
+        }
+        public StuBuilder history(int historyScore) {
+            this.historyScore = historyScore;
+            return this;
+        }
+        public Student build() {
+            return new Student(name, mathsScore, physicsScore, historyScore);
+        }
 }

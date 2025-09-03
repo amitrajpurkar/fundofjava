@@ -3,6 +3,8 @@ package unit2NextSteps.frmsch;
 import java.util.List;
 import java.util.Scanner;
 
+import unit2NextSteps.frmsch.Student.StuBuilder;
+
 /**
  * 1) Input N students and their 3 test scores. Output their name, tests and
  * average. Also, print the class average.
@@ -32,7 +34,7 @@ public class ProjectAug {
                             a = scanner.nextInt();
                             b = scanner.nextInt();
                             c = scanner.nextInt();
-                            Student student = new Student(name, a, b, c);
+                            Student student = new StuBuilder(name).maths(a).physics(b).history(c).build(); 
                             String validityCheck = student.validate();
                             if (!validityCheck.isEmpty()) {
                                 System.out.println(validityCheck);
