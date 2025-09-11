@@ -3,7 +3,7 @@ package unit2NextSteps.chp07;
 import java.util.Scanner;
 
 
-public class prj01 {
+public class prj01and02 {
     public static void main(String[] args) {
         guessBetween1and100();
         System.out.println("-------------------");
