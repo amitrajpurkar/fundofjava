@@ -23,28 +23,28 @@ public class Students {
     public static double averageAllScore() {
         int total = 0;
         for (Student student : studentList) {
-            total += student.mathsScore + student.physicsScore + student.historyScore;
+            total += student.getAverageScore();
         }
-        return total / (studentList.size() * 3);
+        return total / studentList.size();
     }
     public static double averageMathsScore() {
         int total = 0;
         for (Student student : studentList) {
-            total += student.mathsScore;
+            total += student.getMathsScore();
         }
         return total / studentList.size();
     }
     public static double averagePhysicsScore() {
         int total = 0;
         for (Student student : studentList) {
-            total += student.physicsScore;
+            total += student.getPhysicsScore();
         }
         return total / studentList.size();
     }
     public static double averageHistoryScore() {
         int total = 0;
         for (Student student : studentList) {
-            total += student.historyScore;
+            total += student.getHistoryScore();
         }
         return total / studentList.size();
     }
@@ -52,9 +52,9 @@ public class Students {
         int highest = 0;
         String highestName = "";
         for (Student student : studentList) {
-            if (student.mathsScore > highest) {
-                highest = student.mathsScore;
-                highestName = student.name;
+            if (student.getMathsScore() > highest) {
+                highest = student.getMathsScore();
+                highestName = student.getName();
             }
         }
         return "Highest Maths Score: " + highest + " by " + highestName;
@@ -63,9 +63,9 @@ public class Students {
         int highest = 0;
         String highestName = "";
         for (Student student : studentList) {
-            if (student.physicsScore > highest) {
-                highest = student.physicsScore;
-                highestName = student.name;
+            if (student.getPhysicsScore() > highest) {
+                highest = student.getPhysicsScore();
+                highestName = student.getName();
             }
         }
         return "Highest Physics Score: " + highest + " by " + highestName;
@@ -74,9 +74,9 @@ public class Students {
         int highest = 0;
         String highestName = "";
         for (Student student : studentList) {
-            if (student.historyScore > highest) {
-                highest = student.historyScore;
-                highestName = student.name;
+            if (student.getHistoryScore() > highest) {
+                highest = student.getHistoryScore();
+                highestName = student.getName();
             }
         }
         return "Highest History Score: " + highest + " by " + highestName;

@@ -74,4 +74,5 @@ public class Student {
         public Student build() {
             return new Student(name, mathsScore, physicsScore, historyScore);
         }
+    }
 }

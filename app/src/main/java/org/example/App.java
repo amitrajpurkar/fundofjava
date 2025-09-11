@@ -6,16 +6,28 @@ package org.example;
 import unit1GettingStarted.chp02.PrintHello;
 import unit1GettingStarted.chp02.Summary;
 
+
+// try out https://picocli.info/#_introduction
+// https://www.baeldung.com/java-picocli-create-command-line-program
+// https://github.com/eugenp/tutorials/tree/master/libraries-cli
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-
         PrintHello.helloFromCupOfJava();
-
         Summary.summaryOfChapter2();
+    }
+
+    private static void showUnits() {
+        System.out.println("Unit 1 - Getting Started");
+        System.out.println("Unit 2 - Next Steps");
+    }
+
+    private static void showChapters(String unit) {
+        System.out.println("Chapter 1 - Hello World");
+        System.out.println("Chapter 2 - Next Steps");
     }
 }
