@@ -5,26 +5,28 @@ import java.util.Scanner;
 public class prj05 {
     public static void main(String[] args) {
         System.out.println("Hello World");
-    }
 
-    public static void determineGCD() {
         try (Scanner scanner = new Scanner(System.in)) {
             scanner.useDelimiter("\n");
 
-            System.out.println("Enter two positive integers: ");
-            int n1 = scanner.nextInt();
-            int n2 = scanner.nextInt();
-
-            if (n1 < 0 || n2 < 0) {
-                System.out.println("Invalid input");
-                return;
-            }
-
-            double gcd = getGCD(n1, n2);
-            System.out.println("The GCD of " + n1 + " and " + n2 + " is " + gcd);
+            determineGCD(scanner);
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public static void determineGCD(Scanner scanner) {
+        System.out.println("Enter two positive integers: ");
+        int n1 = scanner.nextInt();
+        int n2 = scanner.nextInt();
+
+        if (n1 < 0 || n2 < 0) {
+            System.out.println("Invalid input");
+            return;
+        }
+
+        double gcd = getGCD(n1, n2);
+        System.out.println("The GCD of " + n1 + " and " + n2 + " is " + gcd);
     }
 
     /**

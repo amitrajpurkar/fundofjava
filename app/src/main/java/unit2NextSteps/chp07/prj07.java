@@ -1,6 +1,6 @@
 package unit2NextSteps.chp07;
 
-public class prp07 {
+public class prj07 {
     public static void main(String[] args) {
         System.out.println("Hello World");
 

@@ -5,10 +5,20 @@ import java.util.Scanner;
 
 public class prj01and02 {
     public static void main(String[] args) {
-        guessBetween1and100();
-        System.out.println("-------------------");
-        youPickComputerGuesses();
-        System.out.println("-------------------");
+        try(Scanner scanner = new Scanner(System.in)) {
+            scanner.useDelimiter("\n");
+
+            int numOfGuesses = guessBetween1and100(scanner);
+            System.out.println("You guessed the number in " + numOfGuesses + " tries.");
+            System.out.println("-------------------");
+
+            numOfGuesses = youPickComputerGuesses(scanner);
+            System.out.println("The computer guessed the number in " + numOfGuesses + " tries.");
+            System.out.println("-------------------");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
     }
 
     // making method public so that app can use it in overall menu.
@@ -20,10 +30,7 @@ public class prj01and02 {
     the user is the guesser. At the end of the game, the computer displays the number of guesses
     required by the user to guess the number correctly.
     */
-    public static void guessBetween1and100() {
-        try(Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
-
+    public static int guessBetween1and100(Scanner scanner) {
             int number = (int) (Math.random() * 100) + 1;
             int guess = 0;
             int count = 0;
@@ -38,21 +45,16 @@ public class prj01and02 {
                     System.out.println("No, your guess is greater than the number.");
                 }
             } while (guess != number);
-            System.out.println("You guessed the number in " + count + " tries.");
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+
+        return count;
     }
 
     /*
      * in the game of guessing numbers, let the user pick a number between 1 and 100. The computer
      * then makes guesses at the number until it guesses correctly.
      */
-    public static void youPickComputerGuesses(){
-        try(Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
-
-            System.out.println("You pick a number between 1 and 100.");
+    public static int youPickComputerGuesses(Scanner scanner){
+            System.out.println("Enter your (secret) number between 1 and 100.");
             int number = scanner.nextInt();
             int guess = 0;
             int count = 0;
@@ -65,9 +67,7 @@ public class prj01and02 {
                     System.out.println("The computer guessed " + guess + ", which is greater than the number.");
                 }
             } while (guess != number);
-            System.out.println("The computer guessed the number in " + count + " tries.");
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+
+            return count;
     }
 }
