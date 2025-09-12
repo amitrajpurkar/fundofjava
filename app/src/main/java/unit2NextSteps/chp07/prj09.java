@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class prj09 {
     public static void main(String[] args) {
         System.out.println("Hello World");
+
+        callSearchWordInFile();
     }
 
     public static void callSearchWordInFile() {
