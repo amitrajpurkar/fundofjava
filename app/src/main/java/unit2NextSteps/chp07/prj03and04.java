@@ -30,6 +30,43 @@ public class prj03and04 {
         return grade;
     }
 
+    public static void scoreUsingIf(Scanner scanner) {
+        System.out.println("Enter your score: ");
+        int score = scanner.nextInt();
+        
+
+        if (score < 0 || score > 100) {
+            System.out.println("Invalid score");
+        } else if (score >= 96 && score <= 100) {
+            System.out.println("Your grade is A+");
+        } else if (score >= 92 && score <= 95) {
+            System.out.println("Your grade is A");
+        } else if (score >= 90 && score <= 91) {
+            System.out.println("Your grade is A-");
+        } else if (score >= 86 && score <= 89) {
+            System.out.println("Your grade is B+");
+        } else if (score >= 82 && score <= 85) {
+            System.out.println("Your grade is B");
+        } else if (score >= 80 && score <= 81) {
+            System.out.println("Your grade is B-");
+        } else if (score >= 76 && score <= 79) {
+            System.out.println("Your grade is C+");
+        } else if (score >= 72 && score <= 75) {
+            System.out.println("Your grade is C");
+        } else if (score >= 70 && score <= 71) {
+            System.out.println("Your grade is C-");
+        } else if (score >= 66 && score <= 69) {
+            System.out.println("Your grade is D+");
+        } else if (score >= 62 && score <= 65) {
+            System.out.println("Your grade is D");
+        } else if (score >= 60 && score <= 61) {
+            System.out.println("Your grade is D-");
+        } else {
+            System.out.println("Your grade is F");
+        }
+        
+    }
+
     private static String getLetterGrade(int score) {
         String grade = null;
         for (Grade g : Grade.values()) {
