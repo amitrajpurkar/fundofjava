@@ -7,7 +7,7 @@ public class prj03and04 {
         System.out.println("Hello World");
 
         try (Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
+            // scanner.useDelimiter("\n");
 
             String grade = scoreToGrade(scanner);
             System.out.println("Your grade is " + grade);

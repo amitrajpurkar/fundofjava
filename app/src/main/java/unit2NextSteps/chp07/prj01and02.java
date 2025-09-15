@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class prj01and02 {
     public static void main(String[] args) {
         try(Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
+            // scanner.useDelimiter("\n");
 
             int numOfGuesses = guessBetween1and100(scanner);
             System.out.println("You guessed the number in " + numOfGuesses + " tries.");

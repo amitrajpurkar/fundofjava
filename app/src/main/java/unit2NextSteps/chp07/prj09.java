@@ -16,7 +16,7 @@ public class prj09 {
 
     public static void callSearchWordInFile() {
         try(Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
+            // scanner.useDelimiter("\n");
 
             System.out.println("Enter the name of the file: ");
             String fileName = scanner.nextLine();

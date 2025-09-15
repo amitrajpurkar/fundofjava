@@ -12,7 +12,7 @@ public class Chapter07 {
     public static void main(String[] args) {
         System.out.println("Chapter 7: Control Structures");
         try (Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
+            // scanner.useDelimiter("\n");
 
             showMenu();
             System.out.println("Enter your choice: ");

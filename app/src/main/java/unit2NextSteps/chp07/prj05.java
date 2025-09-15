@@ -7,7 +7,7 @@ public class prj05 {
         System.out.println("Hello World");
 
         try (Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
+            // scanner.useDelimiter("\n");
 
             determineGCD(scanner);
         } catch (Exception e) {

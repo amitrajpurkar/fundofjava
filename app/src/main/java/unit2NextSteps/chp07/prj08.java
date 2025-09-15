@@ -9,7 +9,7 @@ public class prj08 {
         System.out.println("Hello World");
 
         try (Scanner scanner = new Scanner(System.in)) {
-            scanner.useDelimiter("\n");
+            // scanner.useDelimiter("\n");
 
             Map<String, Integer> map = reportStatisticsOnSentence(scanner);
             System.out.println("Number of words: " + map.get("numberOfWords"));
