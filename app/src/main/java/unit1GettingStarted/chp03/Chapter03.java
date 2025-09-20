@@ -3,18 +3,18 @@ package unit1GettingStarted.chp03;
 import static unit1GettingStarted.Utils.printSeparator;
 import static unit1GettingStarted.Utils.printSeparatorWithSpacing;
 
-public class Summary {
+public class Chapter03 {
     public static void main(String[] args) {
         printSeparator();
         System.out.println("Chapter 3: Syntax, Errors, Debugging");
         printSeparator();
 
-        chapter3Summary();
-        reviewKeyTerms();
+        getSummary();
+        
 
     }
 
-    private static void chapter3Summary() {
+    public static void getSummary() {
         printSeparatorWithSpacing();
         System.out.println("""
             * Java programs use the int data type for whole numbers (integers) and double for floating-point numbers (numbers with decimals).\n
@@ -28,34 +28,36 @@ public class Summary {
             * The programmer can modify the color with which images are drawn and the properties of text fonts for a given graphics object
             """);
         printSeparator();
+        reviewKeyTerms();
     }
 
     private static void reviewKeyTerms() {
         printSeparatorWithSpacing();
-        System.out.println("Review Key Terms");
-        System.out.println("Arithmetic expression");
-        System.out.println("Comments");
-        System.out.println("Variable declaration statement");
-        System.out.println("Semantics");
-        System.out.println("Syntax");
-        System.out.println("Keywords");
-        System.out.println("Reserved words");
-        System.out.println("Literal");
-        System.out.println("Pseudocode");
-        System.out.println("Virus");
+        System.out.println("KEY TERMS");
+        System.out.println("""
+            Arithmetic expression
+            Comments
+            Variable declaration statement
+            Semantics
+            Syntax
+            Keywords eg if, while, for
+            Reserved words eg int, double
+            Literal
+            Pseudocode
+            Virus
 
-        System.out.println("Logic error");
-        System.out.println("Run-time error");
-        System.out.println("Syntax error");
-        System.out.println("Exception");
-        
-        System.out.println("Package");
-        System.out.println("Method signature");
+            Logic error
+            Run-time error
+            Syntax error
+            Exception
 
-        System.out.println("Coordinate system");
-        System.out.println("Graphics context");
-        System.out.println("Screen coordinate system");
-        
+            Package
+            Method signature
+
+            Coordinate system
+            Graphics context
+            Screen coordinate system
+        """); 
         printSeparator();
     }
 }

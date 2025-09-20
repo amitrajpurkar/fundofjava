@@ -75,4 +75,10 @@ public class Chapter07 {
                     6. Exit
                 """);
     }
+
+    public static void getSummary() {
+        System.out.println("""
+            SUMMARY: Chapter 7: Control Structures
+        """);
+    }
 }

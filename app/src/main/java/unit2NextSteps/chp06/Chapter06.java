@@ -3,17 +3,16 @@ package unit2NextSteps.chp06;
 import static unit1GettingStarted.Utils.printSeparator;
 import static unit1GettingStarted.Utils.printSeparatorWithSpacing;
 
-public class Summary {
+public class Chapter06 {
     public static void main(String[] args) {
         printSeparator();
         System.out.println("Chapter 6: Introduction to Classes");
         printSeparator();
 
-        summary();
-        keyTerms();
+        getSummary();
     }
 
-    public static void summary() {
+    public static void getSummary() {
         printSeparatorWithSpacing();
         System.out.println("Summary: Chapter 6: Introduction to Classes");
         System.out.println("""
@@ -28,22 +27,29 @@ public class Summary {
                 9. The lifetime of a variable is the period of program execution during which its storage can be accessed. The lifetime of an instance variable is the same as the lifetime of a particular object. The lifetime of a local variable and a parameter is the time during which a particular call of a method is active\n
          """);
         printSeparator();
+        keyTerms(); 
     }
 
     public static void keyTerms() {
-        System.out.println("Accessor -- a method that returns the value of a private attribute; also known as getter methods");
-        System.out.println("Mutator -- a method that changes the value of a private attribute; also known as setter methods");
-        System.out.println("Actual parameter -- a value passed to a method when it is called");
-        System.out.println("Behavior -- the behavior of an object, which is the set of actions that it performs");
-        System.out.println("Constructor -- a method that is called when an object is created");
-        System.out.println("Encapsulation -- the process of bundling data and methods that work on that data into a single unit called a class");
-        System.out.println("Formal parameter -- a value passed to a method when it is called");
-        System.out.println("Helper method -- a method that is called from other methods in a class definition");
-        System.out.println("Identity -- the identity of an object, which is its address in memory");
-        System.out.println("Instantiation -- the process of creating a new object of a class");
-        System.out.println("Lifetime -- the period of program execution during which a variable can be accessed");
-        System.out.println("Scope -- the area of program text within which a variable is visible");
-        System.out.println("State -- the state of an object, which is the values of its instance variables");
-        System.out.println("Visibility modifier -- the visibility modifier public is used to make methods visible to clients, whereas the visibility modifier private is used to encapsulate or restrict access to variables and methods");
+        printSeparatorWithSpacing();
+        System.out.println("KEY TERMS");
+        System.out.println("""
+            Accessor -- a method that returns the value of a private attribute; also known as getter methods
+            Mutator -- a method that changes the value of a private attribute; also known as setter methods
+            Actual parameter -- a value passed to a method when it is called
+            Behavior -- the behavior of an object, which is the set of actions that it performs
+            Constructor -- a method that is called when an object is created
+            Encapsulation -- the process of bundling data and methods that work on that data into a single unit called a class
+            Formal parameter -- a value passed to a method when it is called
+            Helper method -- a method that is called from other methods in a class definition
+            Identity -- the identity of an object, which is its address in memory
+            Instantiation -- the process of creating a new object of a class
+            Lifetime -- the period of program execution during which a variable can be accessed
+            Scope -- the area of program text within which a variable is visible
+            State -- the state of an object, which is the values of its instance variables
+            Visibility modifier -- the visibility modifier public is used to make methods visible to clients, 
+                whereas the visibility modifier private is used to encapsulate or restrict access to variables and methods
+        """);
+        printSeparator();
     }
 }

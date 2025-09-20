@@ -3,17 +3,17 @@ package unit1GettingStarted.chp04;
 import static unit1GettingStarted.Utils.printSeparator;
 import static unit1GettingStarted.Utils.printSeparatorWithSpacing;
 
-public class Summary {
+public class Chapter04 {
     public static void main(String[] args) {
         printSeparator();
         System.out.println("Chapter 4: Control Structures");
         printSeparator();
 
-        summary();
-        reviewKeyTerms();
+        getSummary();
+        
     }
 
-    private static void summary() {
+    public static void getSummary() {
         printSeparatorWithSpacing();
         System.out.println("Summary");
         System.out.println("""
@@ -28,23 +28,31 @@ public class Summary {
             9. There are many kinds of logic errors that can occur in loops. Examples are the off-by-one error and the infinite loop
             """);
         printSeparator();
+        reviewKeyTerms();
     }   
 
     private static void reviewKeyTerms() {
         printSeparatorWithSpacing();
         System.out.println("Review Key Terms");
-        System.out.println("Control statements: statement that controls the flow of a program, eg if, if-else, while, for");
-        System.out.println("Counter -- a variable that is incremented or decremented in a loop");
-        System.out.println("Count-controlled loop -- a loop that executes a set of statements a fixed number of times");
-        System.out.println("Entry-controlled loop -- a loop that executes a set of statements until a condition becomes false");
-        System.out.println("Flowchart -- a diagram that shows the control flow of a program");
-        System.out.println("Infinite loop -- a loop that never ends");
-        System.out.println("Iteration -- the process of repeating a set of statements over and over again");
-        System.out.println("Off-by-one error -- a logic error that occurs when a program executes a set of statements an incorrect number of times");
-        System.out.println("Overloading -- a feature that allows a class to have multiple methods with the same name but different parameters");
-        System.out.println("Random number generator -- this is a mechanism that returns numbers chosen at random from a predesignated interval; in Java this is implemented in the Random class; it has methods nextInt() and nextDouble()");
-        System.out.println("Sentinel -- a value that signals the end of a loop");
-        System.out.println("Task-controlled loop -- a loop that executes a set of statements until a condition becomes true");
+        System.out.println("""
+            Control statements: statement that controls the flow of a program, eg if, if-else, while, for
+            Counter -- a variable that is incremented or decremented in a loop
+            Count-controlled loop -- a loop that executes a set of statements a fixed number of times
+            Entry-controlled loop -- a loop that executes a set of statements until a condition becomes false
+            Flowchart -- a diagram that shows the control flow of a program
+            Infinite loop -- a loop that never ends
+            Iteration -- the process of repeating a set of statements over and over again
+            Off-by-one error -- a logic error that occurs when a program executes a set of statements an incorrect number of times
+            Overloading -- a feature that allows a class to have multiple methods with the same name but different parameters
+            Random number generator -- this is a mechanism that returns numbers chosen at random from a predesignated interval; 
+                in Java this is implemented in the Random class; it has methods nextInt() and nextDouble()
+            Sentinel -- a value that signals the end of a loop
+            Task-controlled loop -- a loop that executes a set of statements until a condition becomes true
+        """);
         printSeparator();
+        System.out.println("""
+            
+        """);
+
     }
 }

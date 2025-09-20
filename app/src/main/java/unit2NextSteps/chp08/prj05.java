@@ -6,7 +6,7 @@ public class prj05 {
     public static void main(String[] args) {
         System.out.println("Hello World");
 
-        //
+        temperatureConversion();
     }
 
     public static void temperatureConversion() {

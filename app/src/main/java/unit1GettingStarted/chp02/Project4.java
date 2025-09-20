@@ -9,7 +9,7 @@ public class Project4 {
     /**
      * write a program that prints the number of minutes in a year
      */
-    private static void printMinutesInYear() {
+    public static void printMinutesInYear() {
         int daysInYear = 365;
         int hoursInDay = 24;
         int minutesInHour = 60;

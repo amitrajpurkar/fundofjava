@@ -3,9 +3,14 @@
  */
 package org.example;
 
-import unit1GettingStarted.chp02.PrintHello;
-import unit1GettingStarted.chp02.Summary;
+import java.util.Scanner;
 
+import static org.example.Utility.runProjectOrSummary;
+import static org.example.Utility.showChapterContents;
+import static org.example.Utility.showChapters;
+import static org.example.Utility.showUnits;
+
+import unit1GettingStarted.chp02.PrintHello;
 
 // try out https://picocli.info/#_introduction
 // https://www.baeldung.com/java-picocli-create-command-line-program
@@ -16,18 +21,56 @@ public class App {
         return "Hello World!";
     }
 
+    /**
+     * Intent of this program:
+     * - this is a CLI based main program
+     * - show the user, a menu of Units first and ask them to choose one
+     * - show the user, a menu of chapters in that unit and ask them to choose one
+     * - once chapter number is chosen, call a single public static method from that
+     * chapter
+     * - ideally have each Chapter-class implement an interface called Chapter,
+     * having a single method called runThisChapterSummary
+     * - each chapter should also show menu of projects and ask user to choose one
+     * - if user chooses a project, call a single public static method from that
+     * project
+     * - ideally have each Project-class implement an interface called Project,
+     * having a single method called runThisProject
+     * 
+     */
     public static void main(String[] args) {
         PrintHello.helloFromCupOfJava();
-        Summary.summaryOfChapter2();
+        try (Scanner scanner = new Scanner(System.in)) {
+            showUnits();
+            System.out.println("Choose the unit number: ");
+            int unitNumber = scanner.nextInt();
+
+            while (unitNumber != 5) {
+                showChapters(unitNumber);
+                System.out.println("Select the chapter number: ");
+                int chapterNumber = scanner.nextInt();
+                if (chapterNumber == 0) {
+                    showUnits();
+                    System.out.println("Choose the unit number: ");
+                    unitNumber = scanner.nextInt();
+                    continue;
+                }
+
+                showChapterContents(chapterNumber);
+                System.out.println("Choose any project or summary: ");
+                String projectNumberOrSummary = scanner.next();
+                if (projectNumberOrSummary.equals("back")) {
+                    showUnits();
+                    System.out.println("Choose the unit number: ");
+                    unitNumber = scanner.nextInt();
+                    continue;
+                }
+                
+                runProjectOrSummary(chapterNumber, projectNumberOrSummary, scanner);
+
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
-    private static void showUnits() {
-        System.out.println("Unit 1 - Getting Started");
-        System.out.println("Unit 2 - Next Steps");
-    }
-
-    private static void showChapters(String unit) {
-        System.out.println("Chapter 1 - Hello World");
-        System.out.println("Chapter 2 - Next Steps");
-    }
 }

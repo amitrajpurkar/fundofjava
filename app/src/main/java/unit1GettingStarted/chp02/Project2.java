@@ -7,7 +7,7 @@ public class Project2 {
         printTrianglePattern(10);
     }
 
-    private static void printHollowTrianglePattern(int n) {
+    public static void printHollowTrianglePattern(int n) {
         System.out.println("Hollow Triangle Pattern");
         String word = "YIELD";
         String lineAccumulator = "";
@@ -46,7 +46,7 @@ public class Project2 {
         return startString +"*  " + word + "  *";
     }
 
-    private static void printTrianglePattern(int n) {
+    public static void printTrianglePattern(int n) {
         System.out.println("Triangle Pattern");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n - i; j++) {

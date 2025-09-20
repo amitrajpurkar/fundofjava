@@ -1,10 +1,24 @@
 package unit1GettingStarted.chp02;
 
+import org.example.Chapter;
+
 import static unit1GettingStarted.Utils.printSeparator;
 import static unit1GettingStarted.Utils.printSeparatorWithSpacing;
 
-public class Summary {
+public class Chapter02  {
+    // implements Chapter... not sure of usage
     public static void summaryOfChapter2() {
+        advantagesThanCpp();
+        osAndIdes();
+        programConstituents();
+        threeBasicSteps();
+        sequenceFromCodeToExecute();
+
+        readability();
+    }
+
+    //@Override
+    public static void getSummary() {
         advantagesThanCpp();
         osAndIdes();
         programConstituents();

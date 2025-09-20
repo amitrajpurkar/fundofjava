@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Project3 {
     public static void main(String[] args) {
         //todo
-
-        convertKilometersToNauticalMiles();
+        Scanner scanner = new Scanner(System.in);
+        convertKilometersToNauticalMiles(scanner);
     }
 
     /**
@@ -17,9 +17,7 @@ public class Project3 {
      * there are 90 degrees, containing 60 minutes of arc each, between the North Pole and Equator
      * a nautical mile is one minute of arc
      */
-    private static void convertKilometersToNauticalMiles() {
-        //todo
-        Scanner scanner = new Scanner(System.in);
+    public static void convertKilometersToNauticalMiles(Scanner scanner) {
         System.out.println("Enter number of kilometers: ");
         double kilometers = scanner.nextDouble();
         double nauticalMiles = kilometers * 90 / 10000;
