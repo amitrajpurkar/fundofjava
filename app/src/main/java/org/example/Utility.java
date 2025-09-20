@@ -14,6 +14,10 @@ import unit1GettingStarted.chp04.Chapter04;
 import unit1GettingStarted.chp05.Chapter05;
 import unit2NextSteps.chp06.Chapter06;
 import unit2NextSteps.chp06.ProjectAug;
+import unit2NextSteps.chp07.Chapter07;
+import unit2NextSteps.chp07.prj01and02;
+import unit2NextSteps.chp07.prj03and04;
+import unit2NextSteps.chp07.prj05;
 
 public class Utility {
 
@@ -249,9 +253,20 @@ public class Utility {
             case 6 -> {
                 switch (projOrSumm) {
                     case "summ" -> Chapter06.getSummary();
-                    case "prj1" -> ProjectAug.runProject();
+                    case "prj1" -> ProjectAug.runProject(scanner);
                 }
             }
+            case 7 -> {
+                switch (projOrSumm) {
+                    case "summ" -> Chapter07.getSummary();
+                    case "prj1" -> prj01and02.guessBetween1and100(scanner);
+                    case "prj2" -> prj01and02.youPickComputerGuesses(scanner);
+                    case "prj3" -> prj03and04.scoreToGrade(scanner);
+                    case "prj4" -> prj03and04.scoreUsingIf(scanner);
+                    case "prj5" -> prj05.determineGCD(scanner);
+                }
+            }
+                
         }
     }
 }

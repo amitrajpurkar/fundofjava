@@ -1,4 +1,4 @@
-package unit2NextSteps.frmsch;
+package unit2NextSteps.chp06;
 
 
 public class Student {
